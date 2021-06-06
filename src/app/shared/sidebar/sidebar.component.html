@@ -1,0 +1,46 @@
+<!--<div><a routerLink="/Segmento"><button mat-raised-button> Segmentos</button></a>
+</div>
+<div>
+<a routerLink="/Categoria"><button mat-raised-button> Categorias</button></a>
+</div>
+<div>
+    <a routerLink="/Dashboard"><button mat-raised-button> Dashboard</button></a>   
+</div>!-->
+
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <h2 style="margin-top: 5px; margin-bottom: 3px;">Casa do Celular</h2>
+            <h4>vendas@casadocelular.com.br</h4>
+        </div>
+        <img *ngIf="!hasProfile" src="https://imagens-revista.vivadecora.com.br/uploads/2018/08/Fachada-de-loja-de-roupas.jpg" alt="">
+        <img *ngIf="hasProfile" src="./assets/images/Portrait_Placeholder.png" alt="">
+    </div>
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Paginas</h2>
+
+    <div *ngIf="isVendor">
+    <a mat-list-item mat-ripple [matRippleColor]="color" routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
+    <a mat-list-item mat-ripple [matRippleColor]="color" routerLinkActive="list-item-active" routerLink="/vitrine">Vitrine</a>
+    </div>
+    <div *ngIf="isAdmin">
+        <a mat-list-item mat-ripple [matRippleColor]="color" routerLinkActive="list-item-active" routerLink="/admin">Usuários</a>
+        <a mat-list-item mat-ripple [matRippleColor]="color" routerLinkActive="list-item-active" routerLink="/admin/manage">Segmento e Categoria</a>
+        </div>
+
+    <mat-divider></mat-divider>
+        <div *ngIf="isVendor">
+    <h2 matSubheader>Ferramentas</h2>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/Dashboard">
+    <mat-icon>import_contacts</mat-icon>
+    Endereço   
+    </a>
+    
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/Dashboard">
+        <mat-icon>contact_phone</mat-icon>
+        Contato
+    </a>
+        </div>
+</mat-nav-list>
+

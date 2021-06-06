@@ -1,0 +1,40 @@
+:host{
+    mat-icon{
+        vertical-align: middle;
+        margin-right: 20px;
+
+    }
+}
+h2{
+    color: black !important;
+}
+
+.mat-list-item{
+    color: black !important;
+}
+
+.mat-divider{
+    border-top-color: gray!important;
+}
+.mat-nav-list{
+    color:black !important;
+}
+
+.profile-card {
+    text-align: center;
+    padding: 0px 20px 20px 20px;
+    
+    img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+   .mat-ripple{
+       color: red !important;
+       background-color: green !important;
+       
+   } 
+   
+}

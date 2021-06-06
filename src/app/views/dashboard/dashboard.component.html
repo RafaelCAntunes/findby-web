@@ -1,0 +1,39 @@
+<div>
+    <app-widget-area></app-widget-area>
+</div>
+
+<br>
+
+    <mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="24">
+       <app-widget-chart-card label="Produto 1" total="500" percentage="50"></app-widget-chart-card>
+    </mat-card>
+
+    <mat-card fxFlex="24">
+        <app-widget-chart-card label="Produto 2" total="250" percentage="25"></app-widget-chart-card>
+    </mat-card>
+    
+    <mat-card fxFlex="24">
+        <app-widget-chart-card label="Produto 3" total="150" percentage="15"></app-widget-chart-card>
+    </mat-card>
+
+    <mat-card fxFlex="24">
+        <app-widget-chart-card label="Produto 4" total="100" percentage="10"></app-widget-chart-card>
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <!--<div fxFlex="60">Table</div>!-->
+    <div fxFlex="100">
+        <app-widget-pie></app-widget-pie>
+    </div>
+</div>

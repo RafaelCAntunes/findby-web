@@ -1,0 +1,33 @@
+<h1 *ngIf="!ischange" mat-dialog-title>Adicionar nova Categoria</h1>
+<h1 *ngIf="ischange" mat-dialog-title>Editar Categoria</h1>
+
+<div mat-dialog-content>
+  <form>
+  <mat-form-field>
+    <mat-label>Nome Categoria</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Descrição Categoria</mat-label>
+    <input matInput [(ngModel)]="data.description">
+  </mat-form-field>
+
+  
+    <mat-form-field>
+    <mat-label>Segmento</mat-label>
+    <select matNativeControl [(ngModel)]="segmentoSelecionado" name="segmento">
+      <option value="" selected></option>
+      <option *ngFor="let segmento of segmentos" [value]="segmento.value">
+        
+      </option>
+    </select>
+  </mat-form-field>
+      </form>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button *ngIf="!ischange" [mat-dialog-close]="data" cdkFocusInitial>Criar</button>
+  <button mat-button *ngIf="ischange" [mat-dialog-close]="data" cdkFocusInitial>Atualizar</button>
+</div>
