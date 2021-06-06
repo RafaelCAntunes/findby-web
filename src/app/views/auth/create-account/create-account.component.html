@@ -1,0 +1,85 @@
+<div class="main-div">
+    <mat-card>
+        <mat-card-content>
+            <mat-card-header>
+                <h1>Registrar Novo Usuário</h1>
+            </mat-card-header>
+            <form  #form="ngForm" (ngSubmit)="onSubmit()">
+
+                <div class="form-group">
+
+                    <mat-form-field class="full-width-input" appearance="legacy">
+
+
+                        <input class="form-control" type="name" name="name" id="name" [(ngModel)]="account.nome"
+                            required matInput #input maxlength="50" placeholder="Nome">
+
+                    </mat-form-field>
+
+
+
+
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <mat-form-field appearance="legacy" class="full-width-input">
+
+                        <input class="full-width-input" type="login" name="login" id="login" [(ngModel)]="account.login"
+                            required matInput #input maxlength="50" placeholder="Login">
+
+                    </mat-form-field>
+
+                                       
+                    <mat-form-field appearance="legacy" class="full-width-input">
+
+                        <input matInput type="password" name="password" id="password" [(ngModel)]="account.senha"
+                            required placeholder="Senha">
+                            
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                <mat-form-field appearance="legacy" class="full-width-input">
+                    <input class="full-width-input" type="email" name="email" id="email" [(ngModel)]="account.email"
+                        required matInput #input maxlength="50" placeholder="Email">
+
+                </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                <mat-form-field appearance="legacy" class="full-width-input">
+                    <input class="full-width-input"  name="CNPJ" id="CNPJ" [(ngModel)]="account.cpfCgc"
+                        required matInput #input maxlength="50" placeholder="CNPJ">
+
+                </mat-form-field>
+
+                <mat-form-field appearance="legacy" class="full-width-input">
+                    <mat-label>Selecione um segmento</mat-label>
+                    <mat-select [(value)]="account.codSegmento">
+                      <mat-option value="1">Alimentação</mat-option>
+                      <!--<option *ngFor="let account of accounts" [value]="segmento.id" (click)="selectAccount($event)">{{segmento.name}}</option>-->
+                    </mat-select>
+                    </mat-form-field>
+
+
+                </div>
+
+
+                <mat-card-actions class="full-width-input" style="margin-bottom: -25px;">
+                    <mat-grid-list cols="2" rowHeight="2:1" [gutterSize]="'5px'">
+                        <mat-grid-tile>
+                    <button mat-raised-button type="submit" [disabled]="form.invalid"
+                    class="full-width-input">Enviar Cadastro</button>
+                </mat-grid-tile>
+                    <mat-grid-tile>
+                    <button mat-raised-button type="button" [routerLink]="['']">Voltar</button>
+                            </mat-grid-tile>
+                            </mat-grid-list>
+                </mat-card-actions>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

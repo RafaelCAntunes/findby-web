@@ -1,0 +1,23 @@
+
+<div class="content">
+  <mat-card class="mat-elevation-z4">
+    <mat-card-header>
+      <mat-card-title> {{label}} </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://s2.glbimg.com/q_OEXJZ4IB_d7k_CiXC9V8ZYJOU=/0x0:1920x1080/984x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2018/03/05/iphone-8.jpg">
+    <mat-card-content>
+      <p>
+        R$ 3500,00
+      </p>
+      <p>
+        Iphone 8 plus, 128gb.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button matTooltip="Detalhes"><mat-icon>search</mat-icon></button>
+      <button mat-button matTooltip="Editar"><mat-icon>edit</mat-icon></button>
+      <button mat-button matTooltip="Gerar Promoção" (click)="openDialogDiscount()"><mat-icon> local_offer</mat-icon></button>
+      <button mat-button matTooltip="Apagar Item" (click)="openDialogDeleteProduct()"><mat-icon>delete</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
+</div>

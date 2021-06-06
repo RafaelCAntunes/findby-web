@@ -1,0 +1,73 @@
+.form-group{
+    display: flex;
+  flex-direction: row;
+  gap: 20px;
+  
+}
+
+.full-width-input{
+    width: 100%;
+}
+
+.main-div{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .mat-card-header{
+    justify-content: center;
+    margin-right: 40px;
+}
+
+.mat-raised-button{
+   
+    height: 40px;
+    width: 180px;
+    background-color:  #3f51b5;
+    margin:0em;
+    padding: 0em;
+    
+
+}
+
+mat-card {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+background-color: white;
+color: black;
+}
+
+::ng-deep .mat-form-field {
+    .mat-input-element {
+        color: black;
+    }
+    .mat-form-field-label {
+        color: slategray;
+    }
+    .mat-form-field-underline {
+        background-color: slategray;
+    }
+    .mat-form-field-ripple {
+        background-color: slategray;
+    }
+    .mat-form-field-required-marker {
+        color: slategray;
+    }
+}
+
+.mat-option{
+    background-color: white !important;
+    color: black !important
+}
+::ng-deep .mat-select-value{    
+    color: black!important;  }
+.mat-option:hover {
+    background-color: white !important;
+    color: black !important}
+
+    
